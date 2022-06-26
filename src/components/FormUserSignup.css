@@ -1,0 +1,111 @@
+.container {
+  background-color: #ffffff;
+  width: 500px;
+  margin-top: 30px;
+  margin-left: 500px;
+  margin-bottom: 10px;
+  border-radius: 8px;
+}
+.signup_heading {
+  padding: 15px;
+  text-align: center;
+  font-size: 35px;
+}
+#form-signup {
+  font-size: 16px;
+
+  padding: 15px;
+}
+.text_signup {
+  font-size: 26px;
+
+  color: #333333;
+}
+
+.input {
+  width: 100%;
+  background: #f2f2f2;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+.button {
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+.btn {
+  display: flex;
+  justify-content: space-around;
+  padding-bottom: 30px;
+}
+.btn-array p {
+  /* margin: 0 !important; */
+  margin: 0;
+  height: auto;
+  width: auto;
+}
+
+/* .btn-array {
+  display: flex;
+  justify-content: space-between;
+  justify-content: space-evenly;
+  justify-content: space-around;
+  margin: 0;
+} */
+
+/* CSS */
+.btn-array {
+  align-items: center;
+  background-clip: padding-box;
+  background-color: #fa6400;
+  border: 1px solid transparent;
+  border-radius: 0.25rem;
+  box-shadow: rgba(0, 0, 0, 0.02) 0 1px 3px 0;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  display: inline-flex;
+  font-family: system-ui, -apple-system, system-ui, "Helvetica Neue", Helvetica,
+    Arial, sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  justify-content: center;
+  line-height: 1.25;
+  margin: 0;
+  min-height: 3rem;
+  padding: calc(0.875rem - 1px) calc(1.5rem - 1px);
+  position: relative;
+  text-decoration: none;
+  transition: all 250ms;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: baseline;
+  width: auto;
+}
+
+.btn-array:hover,
+.btn-array:focus {
+  background-color: #fb8332;
+  box-shadow: rgba(0, 0, 0, 0.1) 0 4px 12px;
+}
+
+.btn-array:hover {
+  transform: translateY(-1px);
+}
+
+.btn-array:active {
+  background-color: #c85000;
+  box-shadow: rgba(0, 0, 0, 0.06) 0 2px 4px;
+  transform: translateY(0);
+}

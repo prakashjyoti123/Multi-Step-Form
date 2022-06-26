@@ -1,0 +1,35 @@
+.form-complete {
+  text-align: center;
+  color: green;
+  font-size: 30px;
+  background-color: #fff;
+  width: 600px;
+  margin-left: 30.25%;
+  border-radius: 10px 10px 0px 0px;
+}
+.form-complete p {
+  text-align: center;
+  color: green;
+  font-weight: 500;
+  line-height: 2rem;
+  font-size: 16px;
+}
+
+.code-output {
+  margin-top: -1rem;
+  width: 600px;
+  margin-left: 30.25%;
+  border-radius: 0rem 0rem 10px 10px;
+  background-color: #fff;
+  color: black;
+}
+.code-output pre {
+  font-weight: 500;
+  padding: 1rem;
+}
+img {
+  margin: 0 auto;
+  /* padding: $spacing-medium 0 $spacing-large 0; */
+  width: 100px;
+  height: auto;
+}
