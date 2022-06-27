@@ -1,6 +1,6 @@
 import React from "react";
 import { useSelector } from "react-redux";
-import IMGgreentick from "../components/img/green-tick.svg"; // load image
+import IMGgreentick from "../img/green-tick.svg"; // load image
 // import "./styles.scss";
 import "./FormComplite.css";
 
@@ -15,7 +15,7 @@ function FormUserResult({ pageTitle, successMessage }) {
   console.log(stateOutput); // output to console.log
 
   return (
-    <>
+    <div className="wrapper">
       <div className="form-complete">
         <h2>{pageTitle || "Confirmation"}</h2>
 
@@ -31,7 +31,7 @@ function FormUserResult({ pageTitle, successMessage }) {
       <div className="code-output">
         <pre>{stateOutput}</pre>
       </div>
-    </>
+    </div>
   );
 }
 

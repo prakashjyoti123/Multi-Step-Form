@@ -5,62 +5,39 @@ import FormUserSignup from "./FormUserSignup";
 // load component
 import SecondPage from "./SecondPage";
 import ThirdPage from "./ThirdPage";
+import "./Views.css";
 
 import FormUserCompleted from "./FormComplite";
-// load component
-// import FormUserCompleted from "../../components/form-completed";
 // load component
 
 const Signup = () => {
   const pageStage = useSelector((state) => state.FormStage);
-  //const stateAll = useSelector(state => state)
-  //console.log(`output: ${JSON.stringify(stateAll, null, 2)}`) // output results to console.log
 
   return (
     <main>
       <div className="form-wrapper">
-        {/* <h1 data-testid="Signup-Title" className="text-center">
-          Signup Form
-        </h1> */}
-
         <section>
-          {/* When adding/removing components, update the progress bar below */}
-          <LazyLoad once>
+          <div className="page-wrapper">
             <div className="progressbar">
               <div
-                className={
-                  pageStage === 1
-                    ? "progress-step progress-step-active"
-                    : "progress-step"
-                }
-                data-title="User"
-              ></div>
-              <div
-                className={
-                  pageStage === 2
-                    ? "progress-step progress-step-active"
-                    : "progress-step"
-                }
-                data-title="Privacy"
-              ></div>
-              <div
-                className={
-                  pageStage === 3
-                    ? "progress-step progress-step-active"
-                    : "progress-step"
-                }
-                data-title="Done"
+                style={{
+                  width:
+                    pageStage === 1
+                      ? "25%"
+                      : pageStage == 2
+                      ? "50%"
+                      : pageStage == 3
+                      ? "75%"
+                      : "100%",
+                }}
               ></div>
             </div>
-          </LazyLoad>
-
-          <div className="page-wrapper">
             {pageStage === 1 && (
               // Signup Page
               <LazyLoad once>
-                <div className="wrap">
+                <div>
                   <FormUserSignup
-                    pageTitle={"User Form:"} // form page stage title
+                    pageTitle={"User Form"} // form page stage title
                     submitButtonText={"Next"} // submit next button display text
                     previousButton={false} // show/hide previous button
                   />

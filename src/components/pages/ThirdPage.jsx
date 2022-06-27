@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
-import { formStage, thirdPage } from "../store/rootSlice";
+import { formStage, thirdPage } from "../../store/rootSlice";
 // import "./styles.scss";
 import "./FormUserSignup.css";
 
@@ -9,7 +9,8 @@ function ThirdPage({ pageTitle, submitButtonText, previousButton }) {
   const dispatch = useDispatch();
 
   // get Redux store values for formUserSignup
-  const currentStage = useSelector((state) => state.FormStage); // for previous button
+  const currentStage = useSelector((state) => state.FormStage);
+  const formstageRole = useSelector((state) => state.ThirdPage.role);
   const formstageQualification = useSelector(
     (state) => state.ThirdPage.qualification
   );
@@ -18,6 +19,7 @@ function ThirdPage({ pageTitle, submitButtonText, previousButton }) {
   const [formData, setFormData] = useState({
     qualification: formstageQualification || "",
     skill: formstageSkill || "",
+    role: formstageRole || "",
   });
 
   // form values onchange
@@ -69,6 +71,7 @@ function ThirdPage({ pageTitle, submitButtonText, previousButton }) {
           // update formSignup
           qualification: formData.qualification,
           skill: formData.skill,
+          role: formData.role,
         })
       );
     }
@@ -105,6 +108,23 @@ function ThirdPage({ pageTitle, submitButtonText, previousButton }) {
         {errors.qualification && (
           <span className="error-message">{errors.qualification}</span>
         )}
+        <p>
+          <label className="text_signup" htmlFor="role">
+            Role
+          </label>
+          <input
+            className="input"
+            type="text"
+            id="role"
+            name="role"
+            autoComplete="role"
+            aria-label="role"
+            aria-required="false"
+            placeholder="eg. software developer"
+            value={formData.role}
+            onChange={handleChange}
+          />
+        </p>
 
         <p>
           <label className="text_signup" htmlFor="role">
@@ -142,7 +162,9 @@ function ThirdPage({ pageTitle, submitButtonText, previousButton }) {
             </p>
           )}
           <div className="button">
-            <button className="btn-array">Next </button>
+            <button className="btn-array">
+              {submitButtonText || "Submit"}{" "}
+            </button>
           </div>
         </div>
       </form>

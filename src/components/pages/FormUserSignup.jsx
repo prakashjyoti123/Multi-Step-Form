@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
-import { formStage, formSignup } from "../store/rootSlice";
+import { formStage, formSignup } from "../../store/rootSlice";
 // import "./styles.scss";
 import "./FormUserSignup.css";
 
@@ -11,14 +11,14 @@ function FormUserSignup({ pageTitle, submitButtonText, previousButton }) {
   // get Redux store values for formUserSignup
   const currentStage = useSelector((state) => state.FormStage); // for previous button
   const formstageName = useSelector((state) => state.FormUserSignup.name);
-  const formstageRole = useSelector((state) => state.FormUserSignup.role);
+  // const formstageRole = useSelector((state) => state.FormUserSignup.role);
   const formstageEmail = useSelector((state) => state.FormUserSignup.email);
   const formstagePass = useSelector((state) => state.FormUserSignup.password);
 
   // form values initial state
   const [formData, setFormData] = useState({
     name: formstageName || "",
-    role: formstageRole || "",
+
     email: formstageEmail || "",
     password: formstagePass || "",
   });
@@ -83,7 +83,7 @@ function FormUserSignup({ pageTitle, submitButtonText, previousButton }) {
         formSignup({
           // update formSignup
           name: formData.name,
-          role: formData.role,
+
           email: formData.email,
           password: formData.password,
         })
@@ -120,24 +120,6 @@ function FormUserSignup({ pageTitle, submitButtonText, previousButton }) {
           />
         </p>
         {errors.name && <span className="error-message">{errors.name}</span>}
-
-        <p>
-          <label className="text_signup" htmlFor="role">
-            Role
-          </label>
-          <input
-            className="input"
-            type="text"
-            id="role"
-            name="role"
-            autoComplete="role"
-            aria-label="role"
-            aria-required="false"
-            placeholder="eg. software developer"
-            value={formData.role}
-            onChange={handleChange}
-          />
-        </p>
 
         <p>
           <label className="text_signup" htmlFor="email">

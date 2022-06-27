@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
-import { formStage, secondPage } from "../store/rootSlice";
+import { formStage, secondPage } from "../../store/rootSlice";
 // import "./styles.scss";
 import "./FormUserSignup.css";
 
@@ -141,7 +141,7 @@ function SecondPage({ pageTitle, submitButtonText, previousButton }) {
             autoComplete="maritalstatus"
             aria-label="maritalstatus"
             aria-required="true"
-            placeholder="Marital Status"
+            placeholder="Married or Single"
             value={formData.maritalstatus}
             onChange={handleChange}
           />

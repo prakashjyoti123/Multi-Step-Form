@@ -1,20 +1,21 @@
 .container {
   background-color: #ffffff;
-  width: 500px;
+  width: 600px;
+
   margin-top: 30px;
-  margin-left: 500px;
+  margin: 0 auto;
   margin-bottom: 10px;
   border-radius: 8px;
 }
 .signup_heading {
-  padding: 15px;
+  padding: 10px;
   text-align: center;
   font-size: 35px;
 }
 #form-signup {
   font-size: 16px;
 
-  padding: 15px;
+  padding: 10px;
 }
 .text_signup {
   font-size: 26px;
@@ -35,7 +36,7 @@
 .button {
   border: none;
   color: white;
-  padding: 15px 32px;
+
   text-align: center;
   text-decoration: none;
   display: inline-block;
@@ -108,4 +109,14 @@
   background-color: #c85000;
   box-shadow: rgba(0, 0, 0, 0.06) 0 2px 4px;
   transform: translateY(0);
+}
+@media screen and (max-width: 600px) {
+  .container,
+  .signup_heading,
+  .input {
+    width: 100%;
+    height: 100%;
+    margin-top: 0;
+    margin-left: 0px;
+  }
 }

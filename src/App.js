@@ -1,5 +1,5 @@
 import "./App.css";
-import Views from "./components/Views";
+import Views from "./components/pages/Views";
 
 function App() {
   return (
